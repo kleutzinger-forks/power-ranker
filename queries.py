@@ -10,7 +10,7 @@ query GetTournamentsByUser($userId: ID!) {
       perPage: 100
       page: 1
       filter: {
-        videogameId: [1386]
+        videogameId: [1]
         past: true
       }
     }) {
@@ -30,7 +30,7 @@ query GetTournamentsByUser($userId: ID!) {
 get_events_by_tournament = '''
 query GetEventByTournament($slug: String!) {
   tournament(slug: $slug) {
-  	events(filter: {videogameId: [1386]}) {
+  	events(filter: {videogameId: [1]}) {
       id
       slug
       name
@@ -59,7 +59,7 @@ query GetEventsByUser($userId: ID!) {
       page: 1
       sortBy: "startAt desc"
       filter: {
-        videogameId: [1386]
+        videogameId: [1]
         #eventType: 1
       }
     }) {
@@ -80,6 +80,17 @@ query GetEventsByUser($userId: ID!) {
         	addrState
         }
       }
+    }
+  }
+}
+'''
+
+get_player_id_from_player_slug = '''
+query GetUser($slug: String!) {
+  user(slug: $slug) {
+    id
+    player {
+      gamerTag
     }
   }
 }

@@ -1,64 +1,45 @@
-2022-09-30 19:30:00 --- tournament/smashed-bros-31 --- Louisville, KY 
-2022-09-30 22:00:00 --- tournament/elite-smash-fridays-97 --- Lakewood, CO 
-2022-10-01 10:00:00 --- tournament/the-mothership-invitational-1-500 --- Louisville, KY 
-2022-10-02 18:00:00 --- tournament/the-card-n-all-colosseum-29 --- Louisville, KY 
-2022-10-03 19:00:00 --- tournament/don-t-get-tilted-56-1 --- Lexington, KY 
-2022-10-04 18:00:00 --- tournament/fight-night-59 --- Morehead, KY 
-2022-10-05 19:00:00 --- tournament/lunar-lounge-22 --- Louisville, KY 
-2022-10-07 11:00:00 --- tournament/the-big-house-10 --- Detroit, MI 
-2022-10-07 19:00:00 --- tournament/vandertilted-67 --- Nashville, TN 
-2022-10-07 20:00:00 --- tournament/meteor-smash-39 --- Louisville, KY 
-2022-10-08 19:00:00 --- tournament/bad-wolf-battles-7-2 --- Berea, KY 
-2022-10-09 18:00:00 --- tournament/the-card-n-all-colosseum-30 --- Louisville, KY 
-2022-10-10 19:00:00 --- tournament/don-t-get-tilted-57-1 --- Lexington, KY 
-2022-10-11 18:00:00 --- tournament/fight-night-60 --- Morehead, KY 
-2022-10-12 19:00:00 --- tournament/lunar-lounge-23 --- Louisville, KY 
-2022-10-14 18:00:00 --- tournament/apocalypse-4 --- Clarksville, TN 
-2022-10-14 19:30:00 --- tournament/smashed-bros-32 --- Louisville, KY 
-2022-10-15 12:00:00 --- tournament/cavalry-clash-8 --- Louisville, KY 
-2022-10-17 19:00:00 --- tournament/don-t-get-tilted-58-happy-halloween --- Lexington, KY 
-2022-10-18 18:00:00 --- tournament/fight-night-61-1 --- Morehead, KY 
-2022-10-19 19:00:00 --- tournament/lunar-lounge-24 --- Louisville, KY 
-2022-10-21 20:00:00 --- tournament/meteor-smash-40 --- Louisville, KY 
-2022-10-22 10:30:00 --- tournament/bourbon-state-gaming-double-barreled-vi --- Lexington, KY 
-2022-10-25 18:00:00 --- tournament/fight-night-62 --- Morehead, KY 
-2022-10-26 19:00:00 --- tournament/lunar-lounge-25 --- Louisville, KY 
-2022-10-28 16:30:00 --- tournament/kumite-in-tennessee-2022-the-finale --- Lebanon, TN 
-2022-10-28 19:00:00 --- tournament/vandertilted-69 --- Nashville, TN 
-2022-10-28 20:00:00 --- tournament/smashed-bros-33 --- Louisville, KY 
-2022-10-31 19:00:00 --- tournament/don-t-get-tilted-59-happy-halloween --- Lexington, KY 
-2022-11-01 18:00:00 --- tournament/fight-night-63 --- Morehead, KY 
-2022-11-02 19:00:00 --- tournament/lunar-lounge-26 --- Louisville, KY 
-2022-11-04 20:00:00 --- tournament/meteor-smash-41-1 --- Louisville, KY 
-2022-11-07 19:00:00 --- tournament/don-t-get-tilted-60-1 --- Lexington, KY 
-2022-11-08 18:00:00 --- tournament/fight-night-64 --- Morehead, KY 
-2022-11-09 19:00:00 --- tournament/lunar-lounge-27-1 --- Louisville, KY 
-2022-11-11 20:00:00 --- tournament/smashed-bros-34 --- Louisville, KY 
-2022-11-12 00:00:00 --- tournament/cavalry-clash-9 --- Louisville, KY 
-2022-11-12 00:00:00 --- tournament/campus-clash-fall-2022 --- Huntington, WV 
-2022-11-14 19:00:00 --- tournament/don-t-get-tilted-61-1 --- Lexington, KY 
-2022-11-15 18:00:00 --- tournament/fight-night-65 --- Morehead, KY 
-2022-11-16 19:00:00 --- tournament/lunar-lounge-28-1 --- Louisville, KY 
-2022-11-18 12:00:00 --- tournament/dreamhack-atlanta-2022-fgc --- Atlanta, GA 
-2022-11-18 18:00:00 --- tournament/apocalypse-7-1 --- Clarksville, TN 
-2022-11-18 20:00:00 --- tournament/meteor-smash-42-1 --- Louisville, KY 
-2022-11-19 11:00:00 --- tournament/sheltowee-smash-n-strive-ii --- Morehead, KY 
-2022-11-20 18:00:00 --- tournament/the-card-n-all-colosseum-36 --- Louisville, KY 
-2022-11-21 19:00:00 --- tournament/don-t-get-tilted-62-1 --- Lexington, KY 
-2022-11-23 19:00:00 --- tournament/ignition-294 --- Skokie, IL 
-2022-11-25 19:30:00 --- tournament/smashed-bros-35-50-pot-bonus --- Louisville, KY 
-2022-11-26 11:00:00 --- tournament/tripoint-stadium --- Romeoville, IL 
-2022-11-28 19:00:00 --- tournament/don-t-get-tilted-63-happy-birthday-eve --- Lexington, KY 
-2022-11-29 18:00:00 --- tournament/fight-night-66-dead-week --- Morehead, KY 
-2022-11-30 19:00:00 --- tournament/lunar-lounge-29-2 --- Louisville, KY 
-2022-12-02 20:00:00 --- tournament/meteor-smash-43 --- Louisville, KY 
-2022-12-05 19:00:00 --- tournament/don-t-get-tilted-64-1 --- Lexington, KY 
-2022-12-07 19:00:00 --- tournament/lunar-lounge-30 --- Louisville, KY 
-2022-12-08 19:00:00 --- tournament/al-119-dragons-lair --- Newport, KY 
-2022-12-09 20:00:00 --- tournament/smashed-bros-36-50-pot-bonus --- Louisville, KY 
-2022-12-11 10:00:00 --- tournament/chain-grab --- Canton, OH 
-2022-12-17 10:00:00 --- tournament/flavortown-throwdown-second-course --- Hilliard, OH 
-2022-12-21 18:00:00 --- tournament/lunar-lounge-31-card-n-all-edition --- Louisville, KY 
-2022-12-21 19:00:00 --- tournament/ignition-298 --- Skokie, IL 
-2022-12-28 19:00:00 --- tournament/ignition-299 --- Skokie, IL 
-2022-12-30 20:00:00 --- tournament/meteor-smash-44 --- Louisville, KY 
+2022-11-10 18:00:00 --- tournament/guildhouse-fighters-56-melee-ggst-dbfz --- San Jose, CA 
+2022-11-12 14:30:00 --- tournament/berkeley-melee-mashfest-6 --- Berkeley, CA 
+2022-11-17 18:00:00 --- tournament/guildhouse-fighters-58-melee-weekly --- San Jose, CA 
+2022-12-02 08:00:00 --- tournament/mainstage-2022 --- Ontario, CA 
+2022-12-06 18:00:00 --- tournament/melee-blackthorn-tavern --- San Francisco, CA 
+2022-12-10 13:00:00 --- tournament/guildhouse-fighters-60-melee-crts-ggst-saturday-event --- San Jose, CA 
+2022-12-13 19:30:00 --- tournament/melee-blackthorn-tavern-2 --- San Francisco, CA 
+2022-12-20 18:00:00 --- tournament/melee-blackthorn-tavern-3 --- San Francisco, CA 
+2022-12-22 18:00:00 --- tournament/guildhouse-fighters-61-melee-weekly --- San Jose, CA 
+2022-12-27 19:30:00 --- tournament/melee-blackthorn-tavern-4 --- San Francisco, CA 
+2022-12-29 18:00:00 --- tournament/guildhouse-fighters-62-melee-weekly --- San Jose, CA 
+2023-01-03 19:00:00 --- tournament/blackthorn-5 --- San Francisco, CA 
+2023-01-05 18:00:00 --- tournament/guildhouse-fighters-63-melee-weekly --- San Jose, CA 
+2023-01-07 12:00:00 --- tournament/active-melee-returns-stonestown-sports-basement --- San Francisco, CA 
+2023-01-12 18:00:00 --- tournament/guildhouse-fighters-64-ssbm-ggst-dbfz --- San Jose, CA 
+2023-01-14 13:00:00 --- tournament/big-guildhouse --- San Jose, CA 
+2023-01-17 18:00:00 --- tournament/melee-blackthorn-tavern-7-pre-genesis --- San Francisco, CA 
+2023-01-19 17:00:00 --- tournament/pre-genesis-9-at-guildhouse --- San Jose, CA 
+2023-01-20 09:00:00 --- tournament/genesis-9-1 --- San Jose, CA 
+2023-01-26 18:00:00 --- tournament/guildhouse-fighters-65-melee-weekly --- San Jose, CA 
+2023-02-02 18:00:00 --- tournament/guildhouse-fighters-66-melee-weekly --- San Jose, CA 
+2023-02-05 12:00:00 --- tournament/santa-clara-melee-12 --- Santa Clara, CA 
+2023-02-09 18:00:00 --- tournament/guildhouse-fighters-67-ssbm-ggst-dbfz --- San Jose, CA 
+2023-02-11 12:00:00 --- tournament/924-melee-1 --- Berkeley, CA 
+2023-02-16 18:00:00 --- tournament/guildhouse-fighters-68-melee-weekly --- San Jose, CA 
+2023-02-19 12:00:00 --- tournament/active-melee-10-1 --- San Francisco, CA 
+2023-02-23 18:00:00 --- tournament/guildhouse-fighters-69-melee-weekly --- San Jose, CA 
+2023-02-26 12:01:00 --- tournament/924-melee-2 --- Berkeley, CA 
+2023-02-28 19:30:00 --- tournament/blackthorn-sf-12 --- San Francisco, CA 
+2023-03-04 11:00:00 --- tournament/gator-games-19 --- None, CA 
+2023-03-05 19:00:00 --- tournament/11th-hour-smash-30 --- Santa Cruz, CA 
+2023-03-11 12:00:00 --- tournament/924-melee-3 --- Berkeley, CA 
+2023-03-18 14:30:00 --- tournament/berkeley-melee-mashfest-9 --- Berkeley, CA 
+2023-03-21 19:00:00 --- tournament/academy-2-warmup-blackthorn-sf-15 --- San Francisco, CA 
+2023-03-23 17:30:00 --- tournament/nightlife-level-2 --- San Francisco, CA 
+2023-03-25 10:00:00 --- tournament/the-norcal-classic-2 --- Oakland, CA 
+2023-03-31 18:00:00 --- tournament/adam-s-smash-series-52-the-pre-major-local --- Portland, OR 
+2023-04-01 10:00:00 --- tournament/major-upset --- Portland, OR 
+2023-04-06 18:00:00 --- tournament/guildhouse-fighters-74-melee-and-p-weekly --- San Jose, CA 
+2023-04-08 13:00:00 --- tournament/guildhouse-season-finale --- San Jose, CA 
+2023-04-15 08:00:00 --- tournament/smash-camp-2023 --- Prescott, AZ 
+2023-04-15 14:30:00 --- tournament/berkeley-melee-mashfest-10-1 --- Berkeley, CA 
+2023-04-22 13:00:00 --- tournament/924-melee-5 --- Berkeley, CA 
+2023-04-29 12:00:00 --- tournament/the-avenues-1 --- San Francisco, CA 
+2023-05-05 17:00:00 --- tournament/finals-destination-12 --- Berkeley, CA 

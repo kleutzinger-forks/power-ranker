@@ -23,7 +23,9 @@ def collect_user_ids_from_file():
       
       # Get user id
       id_idx = name_idx + 3
-      user_id = line[id_idx:].strip()
+      user_slug = line[id_idx:].strip()
+      player_data = json.loads(execute_query(queries.get_player_id_from_player_slug, {"slug": user_slug}))['data']
+      user_id = player_data.get("user").get("id")
       user_dict[user_id] = player_name
 
 
@@ -111,94 +113,91 @@ def write_removed_events_to_files(removed_events):
       i = i + 1
 
 
-def collect_tournies_for_users():
-  """Gathers a collection of tournaments and associated events for a user in a given season."""
+# def collect_tournies_for_users():
+#   """Gathers a collection of tournaments and associated events for a user in a given season."""
 
-  tourney_dict = dict()
-  out_of_bounds_ctr = 0
+#   tourney_dict = dict()
+#   out_of_bounds_ctr = 0
 
-  # Keywords that should help exclude non-viable events
-  filter_names = {'squad strike', 'crew battle', 'redemption', 'ladder', 'doubles', 'amateur'}
+#   # Keywords that should help exclude non-viable events
+#   filter_names = {'doubles', 'teams', 'double', 'team'}
   
-  for user_id, player_name in user_dict.items():
-    print("Processing " + player_name + "'s tournaments...")
-    query_variables = {"userId": user_id}
+#   for user_id, player_name in user_dict.items():
+#     print("Processing " + player_name + "'s tournaments...")
+#     query_variables = {"userId": user_id}
 
-    result = execute_query(queries.get_events_by_user, query_variables)
-    res_data = json.loads(result)
-    if 'errors' in res_data:
-        print('Error:')
-        print(res_data['errors'])
+#     result = execute_query(queries.get_events_by_user, query_variables)
+#     res_data = json.loads(result)
+#     if 'errors' in res_data:
+#         print('Error:')
+#         print(res_data['errors'])
 
-    for event_json in res_data['data']['user']['events']['nodes']:
-      cut_off_date_start = datetime(2023, 1, 1)
-      cut_off_date_end = datetime(2023, 3, 31)
+#     for event_json in res_data['data']['user']['events']['nodes']:
+#       cut_off_date_start = datetime(2022, 11, 1)
+#       cut_off_date_end = datetime(2023, 5, 6)
       
-      tourney = Tournament(event_json['tournament'])
-      event = Event(event_json)
-      event.tourney = tourney
-      tourney.events.append(event)
+#       tourney = Tournament(event_json['tournament'])
+#       event = Event(event_json)
+#       event.tourney = tourney
+#       tourney.events.append(event)
 
-      # Validate PR eligibility
-      if tourney.is_online:
-        removed_events.add(event)
-        continue
-      if event.num_entrants < 8:
-        removed_events.add(event)
-        continue
-      if event.is_teams_event:
-        removed_events.add(event)
-        continue
+#       # Validate PR eligibility
+#       if tourney.is_online:
+#         removed_events.add(event)
+#         continue
+#       if event.is_teams_event:
+#         removed_events.add(event)
+#         continue
 
-      is_not_singles = 1 in [name in event.name.lower() for name in filter_names]
-      if is_not_singles:
-        removed_events.add(event)
-        continue
+#       is_not_singles = 1 in [name in event.name.lower() for name in filter_names]
+#       if is_not_singles:
+#         removed_events.add(event)
+#         continue
 
-      if tourney.start_time < cut_off_date_start or tourney.start_time > cut_off_date_end:
-        # If three consecutive tournaments being processed is outside of the season's window,
-        # we can feel confident that the remaining tournaments to process are also out of bounds
-        out_of_bounds_ctr += 1
-        if out_of_bounds_ctr == 3:
-          break
-        continue
-      out_of_bounds_ctr = 0
+#       if tourney.start_time < cut_off_date_start or tourney.start_time > cut_off_date_end:
+#         # If three consecutive tournaments being processed is outside of the season's window,
+#         # we can feel confident that the remaining tournaments to process are also out of bounds
+#         out_of_bounds_ctr += 1
+#         if out_of_bounds_ctr == 3:
+#           break
+#         continue
+#       out_of_bounds_ctr = 0
 
-      gamerTag = res_data['data']['user']['player']['gamerTag']
+#       gamerTag = res_data['data']['user']['player']['gamerTag']
 
-      event_dict[event.slug] = event
+#       event_dict[event.slug] = event
 
-      # If tournament is out of state, keep track of who attended from Kentucky
-      if tourney.state != "KY":
-        if user_id in user_stats:
-          user_stats[user_id].all_tournies.append(tourney)
-        else:
-          user = User()
-          user.user_id = user_id
-          user.all_tournies.append(tourney)
-          user.gamer_tag = gamerTag
-          user_stats[user_id] = user
+#       # If tournament is out of state, keep track of who attended from Kentucky
+#       # if tourney.state != "KY":
+#       #   if user_id in user_stats:
+#       #     user_stats[user_id].all_tournies.append(tourney)
+#       #   else:
+#       #     user = User()
+#       #     user.user_id = user_id
+#       #     user.all_tournies.append(tourney)
+#       #     user.gamer_tag = gamerTag
+#       #     user_stats[user_id] = user
 
-        if tourney.slug in tourney_dict:
-          tourney_dict[tourney.slug].notable_entries.append(gamerTag)
-        else:
-          tourney.notable_entries.append(gamerTag)
-          tourney_dict[tourney.slug] = tourney
-      else:
-        tourney_dict[tourney.slug] = tourney
+#       #   if tourney.slug in tourney_dict:
+#       #     tourney_dict[tourney.slug].notable_entries.append(gamerTag)
+#       #   else:
+#       #     tourney.notable_entries.append(gamerTag)
+#       #     tourney_dict[tourney.slug] = tourney
+#       # else:
+#       tourney_dict[tourney.slug] = tourney
 
-        if user_id in user_stats:
-          user_stats[user_id].all_tournies.append(tourney)
-          user_stats[user_id].ky_tournies.append(tourney)
-        else:
-          user = User()
-          user.user_id = user_id
-          user.all_tournies.append(tourney)
-          user.ky_tournies.append(tourney)
-          user.gamer_tag = gamerTag
-          user_stats[user_id] = user
+#       if user_id in user_stats:
+#         user_stats[user_id].all_tournies.append(tourney)
+#         user_stats[user_id].ky_tournies.append(tourney)
+#       else:
+#         user = User()
+#         user.user_id = user_id
+#         user.all_tournies.append(tourney)
+#         user.ky_tournies.append(tourney)
+#         user.gamer_tag = gamerTag
+#         user_stats[user_id] = user
         
-  return tourney_dict
+#   return tourney_dict
 
 
 def collect_tournies_for_users_last_season():
@@ -219,8 +218,8 @@ def collect_tournies_for_users_last_season():
 
     for tourney_json in res_data['data']['user']['tournaments']['nodes']:
       season_window_found = False
-      cut_off_date_start = datetime(2023, 1, 1)
-      cut_off_date_end = datetime(2023, 3, 31)
+      cut_off_date_start = datetime(2022, 11, 1)
+      cut_off_date_end = datetime(2023, 5, 6)
       
       tourney = Tournament(tourney_json)
       
@@ -282,7 +281,7 @@ def is_event_eligible(event):
   
   is_eligible = True
 
-  filter_names = {'squad strike', 'crew battle', 'redemption', 'ladder', 'doubles', 'amateur'}
+  filter_names = {'doubles', 'double', 'team', 'teams'}
   is_not_singles = 1 in [name in event.name.lower() for name in filter_names]
   if is_not_singles:
     is_eligible = False
@@ -327,6 +326,9 @@ def init_clients():
   clients = []
   with open('tokens.txt', 'r') as file:
     for token in file:
+      token = token.strip()
+      if not token:
+        continue
       client = GraphQLClient('https://api.start.gg/gql/' + api_version)
       client.inject_token('Bearer ' + token.strip())
       clients.append(client)
@@ -337,9 +339,9 @@ def init_clients():
 def write_tourney_info_to_google_sheet(tournies):
   """Writes tourney data to a specified Google Sheet's Worksheet."""
 
-  gspread_client = gspread.service_account(filename='service_account.json')
-  sh = gspread_client.open("Test Sheet")
-  ws = sh.worksheet("ayo")
+  # gspread_client = gspread.service_account(filename='service_account.json')
+  # sh = gspread_client.open("Test Sheet")
+  # ws = sh.worksheet("ayo")
   
   row_num = 1
   rows = []
@@ -359,7 +361,9 @@ def write_tourney_info_to_google_sheet(tournies):
 
     row_num += 1
 
-  ws.update('A1', rows)
+  # ws.update('A1', rows)
+  print(row)
+  print('hi')
 
 
 def add_blank_fields_to_row(row, num_fields):
@@ -393,7 +397,6 @@ client_idx = 0
 current_token_index = 0
 request_count = 0
 clients = init_clients()
-ultimate_id = '1386'
 
 request_threshold = 79
 
