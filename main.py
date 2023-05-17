@@ -8,6 +8,11 @@ import gspread
 import queries
 from datamodels import *
 
+with open('banned-tournament-slugs.txt', 'r') as f:
+  slugs = f.readlines()
+  slugs = [slug.strip() for slug in slugs]
+  BANNED_TOURNEY_SLUGS = set(slugs) - {''}
+
 
 def collect_user_ids_from_file():
   """Reads through a text file and compiles a dictionary of user_id -> player_name."""
@@ -20,49 +25,15 @@ def collect_user_ids_from_file():
       # Get player name
       name_idx = line.index(delimiter)
       player_name = line[:name_idx]
-      
+      player_name, user_slug = line.split(delimiter)
+      player_name = player_name.strip() 
+      user_slug = user_slug.strip()
+      if 'start.gg' in user_slug:
+        user_slug = user_slug.split('/')[-1]
       # Get user id
-      id_idx = name_idx + 3
-      user_slug = line[id_idx:].strip()
       player_data = json.loads(execute_query(queries.get_player_id_from_player_slug, {"slug": user_slug}))['data']
       user_id = player_data.get("user").get("id")
       user_dict[user_id] = player_name
-
-
-# Currently deprecated
-def set_tournaments():
-  """Runs a tournament query for each user that was collected.
-  Returns a dictonary of tourney_slug -> TourneyObj.
-  """
-  tourney_dict = dict()
-  for user_id, player_name in user_dict.items():
-    print("Processing " + player_name + "'s tournaments...")
-    query_variables = {"userId": user_id}
-
-    result = execute_query(queries.get_tournies_by_user, query_variables)
-    res_data = json.loads(result)
-    if 'errors' in res_data:
-        print('Error:')
-        print(res_data['errors'])
-
-    for tourney_json in res_data['data']['user']['tournaments']['nodes']:
-      cut_off_date_start = datetime(2022, 10, 1)
-      cut_off_date_end = datetime(2022, 12, 31)
-      
-      tourney = Tournament(tourney_json)
-    
-      str_date = tourney.start_time.strftime('%m-%d-%Y')
-      
-      if tourney.start_time >= cut_off_date_start and tourney.start_time <= cut_off_date_end:
-        if tourney.is_online:
-          continue
-        print(tourney.name + '\t' + str_date)
-        tourney_dict[tourney.slug] = tourney
-      elif tourney.start_time < cut_off_date_start:
-        print('Tournament outside of season window --- ' + tourney.name + '\t' + str_date)
-        break
-  
-  return tourney_dict
 
 
 def execute_query(query, variables):
@@ -219,11 +190,16 @@ def collect_tournies_for_users_last_season():
     for tourney_json in res_data['data']['user']['tournaments']['nodes']:
       season_window_found = False
       cut_off_date_start = datetime(2022, 11, 1)
-      cut_off_date_end = datetime(2023, 5, 6)
+      cut_off_date_end = datetime(2023, 5, 7)
       
       tourney = Tournament(tourney_json)
       
       if tourney.is_online:
+        continue
+
+      if tourney.slug in BANNED_TOURNEY_SLUGS:
+        print(f"found {tourney.slug} in banned tourney slugs")
+        breakpoint()
         continue
 
       if tourney.start_time < cut_off_date_start or tourney.start_time > cut_off_date_end:
@@ -287,18 +263,6 @@ def is_event_eligible(event):
     is_eligible = False
   
   if event.is_teams_event:
-    is_eligible = False
-  
-  if event.num_entrants < 12 and event.start_time < datetime(2022, 11, 14):
-    is_eligible = False
-  
-  if event.num_entrants < 8 and event.start_time >= datetime(2022, 11, 14):
-    is_eligible = False
-  
-  if event.is_teams_event:
-    is_eligible = False
-  
-  if event.activity_state == 'CREATED':
     is_eligible = False
   
   return is_eligible

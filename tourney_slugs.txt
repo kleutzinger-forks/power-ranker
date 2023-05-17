@@ -1,14 +1,18 @@
+2022-11-01 17:00:00 --- tournament/the-trashman-s-trashcan-9-sacramento-ca --- Rancho Cordova, CA 
 2022-11-10 18:00:00 --- tournament/guildhouse-fighters-56-melee-ggst-dbfz --- San Jose, CA 
 2022-11-12 14:30:00 --- tournament/berkeley-melee-mashfest-6 --- Berkeley, CA 
 2022-11-17 18:00:00 --- tournament/guildhouse-fighters-58-melee-weekly --- San Jose, CA 
+2022-11-19 12:00:00 --- tournament/the-big-one-davis-melee-s-fall-quarterly --- Davis, CA 
 2022-12-02 08:00:00 --- tournament/mainstage-2022 --- Ontario, CA 
 2022-12-06 18:00:00 --- tournament/melee-blackthorn-tavern --- San Francisco, CA 
 2022-12-10 13:00:00 --- tournament/guildhouse-fighters-60-melee-crts-ggst-saturday-event --- San Jose, CA 
+2022-12-13 17:30:00 --- tournament/the-trashman-s-trashcan-12-sacramento-ca-1 --- Rancho Cordova, CA 
 2022-12-13 19:30:00 --- tournament/melee-blackthorn-tavern-2 --- San Francisco, CA 
 2022-12-20 18:00:00 --- tournament/melee-blackthorn-tavern-3 --- San Francisco, CA 
 2022-12-22 18:00:00 --- tournament/guildhouse-fighters-61-melee-weekly --- San Jose, CA 
 2022-12-27 19:30:00 --- tournament/melee-blackthorn-tavern-4 --- San Francisco, CA 
 2022-12-29 18:00:00 --- tournament/guildhouse-fighters-62-melee-weekly --- San Jose, CA 
+2022-12-30 10:00:00 --- tournament/redemption-rumble --- Brooklyn, NY 
 2023-01-03 19:00:00 --- tournament/blackthorn-5 --- San Francisco, CA 
 2023-01-05 18:00:00 --- tournament/guildhouse-fighters-63-melee-weekly --- San Jose, CA 
 2023-01-07 12:00:00 --- tournament/active-melee-returns-stonestown-sports-basement --- San Francisco, CA 
@@ -22,18 +26,26 @@
 2023-02-05 12:00:00 --- tournament/santa-clara-melee-12 --- Santa Clara, CA 
 2023-02-09 18:00:00 --- tournament/guildhouse-fighters-67-ssbm-ggst-dbfz --- San Jose, CA 
 2023-02-11 12:00:00 --- tournament/924-melee-1 --- Berkeley, CA 
+2023-02-12 12:00:00 --- tournament/santa-clara-melee-13 --- Santa Clara, CA 
+2023-02-12 18:00:00 --- tournament/11th-hour-smash-29-welcome-back --- Santa Cruz, CA 
+2023-02-13 18:00:00 --- tournament/the-trashman-s-trashcan-17-valentines-special-feat-dubs --- Rancho Cordova, CA 
 2023-02-16 18:00:00 --- tournament/guildhouse-fighters-68-melee-weekly --- San Jose, CA 
 2023-02-19 12:00:00 --- tournament/active-melee-10-1 --- San Francisco, CA 
 2023-02-23 18:00:00 --- tournament/guildhouse-fighters-69-melee-weekly --- San Jose, CA 
 2023-02-26 12:01:00 --- tournament/924-melee-2 --- Berkeley, CA 
+2023-02-28 18:00:00 --- tournament/the-trashman-s-trashcan-18-sacramento-ca-1 --- Rancho Cordova, CA 
 2023-02-28 19:30:00 --- tournament/blackthorn-sf-12 --- San Francisco, CA 
+2023-03-02 18:00:00 --- tournament/guildhouse-fighters-70-melee-and-p-weekly --- San Jose, CA 
 2023-03-04 11:00:00 --- tournament/gator-games-19 --- None, CA 
 2023-03-05 19:00:00 --- tournament/11th-hour-smash-30 --- Santa Cruz, CA 
 2023-03-11 12:00:00 --- tournament/924-melee-3 --- Berkeley, CA 
 2023-03-18 14:30:00 --- tournament/berkeley-melee-mashfest-9 --- Berkeley, CA 
+2023-03-21 18:59:00 --- tournament/the-trashman-s-trashcan-19-sacramento-ca --- Rancho Cordova, CA 
 2023-03-21 19:00:00 --- tournament/academy-2-warmup-blackthorn-sf-15 --- San Francisco, CA 
 2023-03-23 17:30:00 --- tournament/nightlife-level-2 --- San Francisco, CA 
 2023-03-25 10:00:00 --- tournament/the-norcal-classic-2 --- Oakland, CA 
+2023-03-28 18:00:00 --- tournament/trey-s-trashcan-20-sacramento-ca --- Rancho Cordova, CA 
+2023-03-28 19:30:00 --- tournament/blackthorn-16 --- San Francisco, CA 
 2023-03-31 18:00:00 --- tournament/adam-s-smash-series-52-the-pre-major-local --- Portland, OR 
 2023-04-01 10:00:00 --- tournament/major-upset --- Portland, OR 
 2023-04-06 18:00:00 --- tournament/guildhouse-fighters-74-melee-and-p-weekly --- San Jose, CA 
@@ -41,5 +53,8 @@
 2023-04-15 08:00:00 --- tournament/smash-camp-2023 --- Prescott, AZ 
 2023-04-15 14:30:00 --- tournament/berkeley-melee-mashfest-10-1 --- Berkeley, CA 
 2023-04-22 13:00:00 --- tournament/924-melee-5 --- Berkeley, CA 
+2023-04-25 18:00:00 --- tournament/trey-s-trashcan-21-sacramento-ca --- Rancho Cordova, CA 
 2023-04-29 12:00:00 --- tournament/the-avenues-1 --- San Francisco, CA 
+2023-05-04 18:00:00 --- tournament/guildhouse-fighters-77-melee-and-p-weekly --- San Jose, CA 
 2023-05-05 17:00:00 --- tournament/finals-destination-12 --- Berkeley, CA 
+2023-05-06 10:00:00 --- tournament/norcal-arcadian-7 --- San Jose, CA 
